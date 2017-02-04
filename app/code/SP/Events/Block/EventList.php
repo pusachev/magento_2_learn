@@ -32,11 +32,11 @@ class EventList extends Template implements IdentityInterface
      */
     public function __construct(
         Context $context,
-        CollectionFactory $postCollectionFactory,
+        CollectionFactory $eventCollectionFactory,
         array $data = []
     ) {
         parent::__construct($context, $data);
-        $this->_eventCollectionFactory = $postCollectionFactory;
+        $this->_eventCollectionFactory = $eventCollectionFactory;
     }
 
     /**
@@ -58,6 +58,7 @@ class EventList extends Template implements IdentityInterface
                 );
             $this->setData('events', $events);
         }
+
         return $this->getData('events');
     }
 

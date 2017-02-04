@@ -41,7 +41,7 @@ class Event extends AbstractDb
      */
     protected function _construct()
     {
-        $this->_init('sp_events_event', 'event_id');
+        $this->_init('sp_events', 'event_id');
     }
 
     /**
