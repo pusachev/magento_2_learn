@@ -2,5 +2,5 @@
 
 <layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="../../../../../Magento/Core/etc/layout_single.xsd">
-    <update handle="sp_events_edit"/>
+    <update handle="sp_events_events_edit"/>
 </layout>

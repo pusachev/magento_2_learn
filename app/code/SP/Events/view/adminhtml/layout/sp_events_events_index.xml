@@ -7,7 +7,7 @@
             <block class="SP\Events\Block\Adminhtml\Event" name="sp_events_grid">
                 <block class="Magento\Backend\Block\Widget\Grid" name="sp_events_grid.grid" as="grid">
                     <arguments>
-                        <argument name="id" xsi:type="string">post_id</argument>
+                        <argument name="id" xsi:type="string">event_id</argument>
                         <argument name="dataSource" xsi:type="object">SP\Events\Model\ResourceModel\Event\Collection</argument>
                         <argument name="default_sort" xsi:type="string">id</argument>
                         <argument name="default_dir" xsi:type="string">ASC</argument>

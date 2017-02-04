@@ -73,9 +73,9 @@ class Edit extends Container
      */
     public function getHeaderText()
     {
-        $newsRegistry = $this->_coreRegistry->registry('sp_events');
-        if ($newsRegistry->getId()) {
-            $newsTitle = $this->escapeHtml($newsRegistry->getTitle());
+        $model = $this->_coreRegistry->registry('sp_events');
+        if ($model->getId()) {
+            $newsTitle = $this->escapeHtml($model->getTitle());
             return __("Edit Event '%1'", $newsTitle);
         } else {
             return __('Add Event');

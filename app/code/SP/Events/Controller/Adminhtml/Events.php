@@ -12,7 +12,7 @@ use Magento\Framework\Registry;
 use Magento\Framework\View\Result\PageFactory;
 use SP\Events\Model\EventFactory;
 
-class Events extends Action
+abstract class Events extends Action
 {
     /**
      * Core registry
@@ -35,6 +35,8 @@ class Events extends Action
      */
     protected $_eventFactory;
 
+    protected $_resultPage = null;
+
     /**
      * @param Context       $context
      * @param Registry      $coreRegistry
@@ -51,11 +53,6 @@ class Events extends Action
         $this->_coreRegistry = $coreRegistry;
         $this->_resultPageFactory = $resultPageFactory;
         $this->_eventFactory = $eventFactory;
-    }
-
-    public function execute()
-    {
-       throw new \Exception("This method must be override");
     }
 
     /**

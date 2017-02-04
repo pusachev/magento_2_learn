@@ -12,7 +12,7 @@ use Magento\Framework\ObjectManagerInterface;
 use Magento\Framework\App\Helper\Context;
 use Magento\Store\Model\ScopeInterface;
 
-class Data
+class Data extends AbstractHelper
 {
     protected $storeManager;
     protected $objectManager;

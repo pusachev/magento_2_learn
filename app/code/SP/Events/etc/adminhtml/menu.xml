@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="SP_Events::events" title="Events" module="SP_Events" sortOrder="51" resource="SP_Events::events"/>
-        <add id="SP_Events::add" title="Events Add" module="SP_Events" sortOrder="10" action="mageplaza_helloworld/post" resource="SP_Events::addt" parent="SP_Events::events"/>
+        <add id="SP_Events::add" title="Events" module="SP_Events" sortOrder="10" action="sp_events/events" resource="SP_Events::grid" parent="SP_Events::events"/>
         <add id="SP_Events::events_configuration" title="Configuration" module="SP_Events" sortOrder="99" parent="SP_Events::events" action="adminhtml/system_config/edit/section/sp_events" resource="SP_Events::events_configuration"/>
     </menu>
 </config>

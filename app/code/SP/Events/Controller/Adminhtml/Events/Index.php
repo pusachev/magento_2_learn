@@ -13,21 +13,6 @@ use SP\Events\Controller\Adminhtml\Events;
 
 class Index extends Events
 {
-    protected $resultPageFactory = false;
-
-    /**
-     * Index constructor.
-     * @param Context       $context
-     * @param PageFactory   $resultPageFactory
-     */
-    public function __construct(
-        Context $context,
-        PageFactory $resultPageFactory
-    ) {
-        parent::__construct($context);
-        $this->resultPageFactory = $resultPageFactory;
-    }
-
     public function execute()
     {
         //Call page factory to render layout and page content

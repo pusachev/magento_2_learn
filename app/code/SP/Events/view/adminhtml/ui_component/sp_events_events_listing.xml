@@ -17,7 +17,7 @@
     </argument>
     <dataSource name="sp_events_events_listing_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">MageplazaHelloWorldPostGridDataProvider</argument>
+            <argument name="class" xsi:type="string">SPEventsGridDataProvider</argument>
             <argument name="name" xsi:type="string">sp_events_events_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">post_id</argument>
             <argument name="requestFieldName" xsi:type="string">post_id</argument>
@@ -280,15 +280,15 @@
                 </item>
             </argument>
         </column>
-        <actionsColumn name="actions" class="Mageplaza\HelloWorld\Ui\Component\Listing\Column\PostActions">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="resizeEnabled" xsi:type="boolean">false</item>
-                    <item name="resizeDefaultWidth" xsi:type="string">107</item>
-                    <item name="indexField" xsi:type="string">post_id</item>
-                </item>
-            </argument>
-        </actionsColumn>
+        <!--<actionsColumn name="actions" class="Mageplaza\HelloWorld\Ui\Component\Listing\Column\PostActions">-->
+            <!--<argument name="data" xsi:type="array">-->
+                <!--<item name="config" xsi:type="array">-->
+                    <!--<item name="resizeEnabled" xsi:type="boolean">false</item>-->
+                    <!--<item name="resizeDefaultWidth" xsi:type="string">107</item>-->
+                    <!--<item name="indexField" xsi:type="string">post_id</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+        <!--</actionsColumn>-->
     </columns>
     <container name="sticky">
         <argument name="data" xsi:type="array">

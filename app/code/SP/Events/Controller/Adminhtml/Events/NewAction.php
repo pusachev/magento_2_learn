@@ -8,7 +8,7 @@ namespace SP\Events\Controller\Adminhtml\Events;
 
 use SP\Events\Controller\Adminhtml\Events;
 
-class Create extends Events
+class NewAction extends Events
 {
     /**
      * Create new news action

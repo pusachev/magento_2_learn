@@ -6,7 +6,7 @@
 
 namespace SP\Events\Block\Adminhtml;
 
-use \Magento\Backend\Block\Widget\Grid\Container;
+use Magento\Backend\Block\Widget\Grid\Container;
 
 class Event extends Container
 {

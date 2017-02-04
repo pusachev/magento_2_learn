@@ -100,9 +100,9 @@ class Info extends Generic implements TabInterface
             'description',
             'editor',
             [
-                'name'        => 'description',
+                'name'     => 'description',
                 'label'    => __('Description'),
-                'required'     => true,
+                'required'  => true,
                 'config'    => $wysiwygConfig
             ]
         );

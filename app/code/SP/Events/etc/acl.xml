@@ -4,7 +4,7 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="SP_Events::events" title="Events" sortOrder="51">
-                    <resource id="SP_Events::grid" title="Events Add" sortOrder="10"/>
+                    <resource id="SP_Events::grid" title="Events Grid" sortOrder="10"/>
                     <resource id="SP_Events::add" title="Events Add" sortOrder="10"/>
                     <resource id="SP_Events::events_configuration" title="Configuration" sortOrder="99" />
                 </resource>
