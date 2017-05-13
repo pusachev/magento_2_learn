@@ -16,10 +16,8 @@ class EventsTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $objectManager = new ObjectManagerHelper($this);
-        $this->urlBuilder = $this->getMock(\Magento\Framework\UrlInterface::class);
         $this->block = $objectManager->getObject(
-            Events::class,
-            ['urlBuilder' => $this->urlBuilder]
+            Events::class
         );
 //        //$this->model = $objectManager->getObject('SP\Events\Model\Event');
 //        $reflection = new \ReflectionClass($this->block);
@@ -31,6 +29,6 @@ class EventsTest extends \PHPUnit_Framework_TestCase
 
     public function testGetEvents()
     {
-        $this->assertTrue(true);
+        $this->assertEquals('SP\Events\Block\Events:getEvents', $this->block->getEvents());
     }
 }

@@ -44,7 +44,7 @@ class Error implements \Magento\TestModule3\Service\V1\ErrorInterface
     {
         throw new NoSuchEntityException(
             __(
-                'Resource with ID "%1" not found.',
+                'ResourceModel with ID "%1" not found.',
                 'resourceY'
             )
         );

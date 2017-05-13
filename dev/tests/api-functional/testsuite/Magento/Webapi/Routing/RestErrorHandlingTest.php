@@ -54,7 +54,7 @@ class RestErrorHandlingTest extends \Magento\TestFramework\TestCase\WebapiAbstra
             $serviceInfo,
             ['resourceY'],
             WebapiException::HTTP_NOT_FOUND,
-            'Resource with ID "%1" not found.'
+            'ResourceModel with ID "%1" not found.'
         );
     }
 

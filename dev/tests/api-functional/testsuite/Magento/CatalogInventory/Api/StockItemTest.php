@@ -27,12 +27,12 @@ class StockItemTest extends WebapiAbstract
     const SERVICE_VERSION = 'V1';
 
     /**
-     * Resource path
+     * ResourceModel path
      */
     const RESOURCE_GET_PATH = '/V1/stockItems';
 
     /**
-     * Resource path
+     * ResourceModel path
      */
     const RESOURCE_PUT_PATH = '/V1/products/:productSku/stockItems/:itemId';
 

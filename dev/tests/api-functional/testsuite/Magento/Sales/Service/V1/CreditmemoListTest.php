@@ -14,7 +14,7 @@ use Magento\TestFramework\TestCase\WebapiAbstract;
 class CreditmemoListTest extends WebapiAbstract
 {
     /**
-     * Resource path
+     * ResourceModel path
      */
     const RESOURCE_PATH = '/V1/creditmemos';
 

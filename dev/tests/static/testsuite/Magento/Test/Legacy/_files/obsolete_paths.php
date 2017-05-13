@@ -227,10 +227,10 @@ return [
         '/dev/tests/integration/testsuite/Magento/Core/Model/Design/Backend',
         '/dev/tests/integration/testsuite/Magento/Theme/Model/Design/Backend'
     ],
-    ['/app/code/Magento/Core/Model/Resource/Theme', '/app/code/Magento/Theme/Model/Resource/Theme'],
+    ['/app/code/Magento/Core/Model/ResourceModel/Theme', '/app/code/Magento/Theme/Model/ResourceModel/Theme'],
     [
-        '/dev/tests/integration/testsuite/Magento/Core/Model/Resource/Theme',
-        '/dev/tests/integration/testsuite/Magento/Theme/Model/Resource/Theme'
+        '/dev/tests/integration/testsuite/Magento/Core/Model/ResourceModel/Theme',
+        '/dev/tests/integration/testsuite/Magento/Theme/Model/ResourceModel/Theme'
     ],
     ['/dev/tests/unit/testsuite/Magento/Webapi/Service/Entity'],
     ['/app/code/Magento/Install'],

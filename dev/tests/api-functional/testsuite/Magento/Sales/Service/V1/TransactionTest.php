@@ -22,7 +22,7 @@ class TransactionTest extends WebapiAbstract
     const SERVICE_READ_NAME = 'salesTransactionRepositoryV1';
 
     /**
-     * Resource path for REST
+     * ResourceModel path for REST
      */
     const RESOURCE_PATH = '/V1/transactions';
 

@@ -13,7 +13,7 @@ use Magento\TestFramework\TestCase\WebapiAbstract;
 class CreditmemoGetTest extends WebapiAbstract
 {
     /**
-     * Resource path
+     * ResourceModel path
      */
     const RESOURCE_PATH = '/V1/creditmemo';
 

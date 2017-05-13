@@ -41,13 +41,13 @@ class DbRuleTest extends \PHPUnit_Framework_TestCase
             ],
             [
                 'SomeModule',
-                '/app/some/path/Resource/Setup.php',
+                '/app/some/path/ResourceModel/Setup.php',
                 '$install->getTableName("some_table")',
                 []
             ],
             [
                 'any',
-                '/app/some/path/Resource/Setup.php',
+                '/app/some/path/ResourceModel/Setup.php',
                 '$install->getTableName("some_table")',
                 [
                     [

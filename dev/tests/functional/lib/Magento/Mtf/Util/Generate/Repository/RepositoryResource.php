@@ -7,7 +7,7 @@
 namespace Magento\Mtf\Util\Generate\Repository;
 
 /**
- * Class Resource
+ * Class ResourceModel
  *
  */
 class RepositoryResource extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
@@ -37,7 +37,7 @@ class RepositoryResource extends \Magento\Framework\Model\ResourceModel\Db\Abstr
     }
 
     /**
-     * Resource initialization
+     * ResourceModel initialization
      */
     protected function _construct()
     {
