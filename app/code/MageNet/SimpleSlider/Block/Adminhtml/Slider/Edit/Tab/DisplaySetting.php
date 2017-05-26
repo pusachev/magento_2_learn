@@ -7,7 +7,7 @@
 namespace MageNet\SimpleSlider\Block\Adminhtml\Slider\Edit\Tab;
 
 
-class General
+class DisplaySetting
 {
 
 }

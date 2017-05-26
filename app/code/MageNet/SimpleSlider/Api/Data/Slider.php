@@ -15,6 +15,7 @@ interface SliderInterface
     const IMAGE_COLUMN_NAME         = 'image';
     const ALT_COLUMN_NAME           = 'alt';
     const DESCRIPTION_COLUMN_NAME   = 'description';
+    const URL_COLUMN_NAME           = 'url';
     const DISPLAY_FROM_COLUMN_NAME  = 'display_from';
     const DISPLAY_TO_COLUMN_NAME    = 'display_to';
     const STATUS_COLUMN_NAME        = 'status';
@@ -23,6 +24,9 @@ interface SliderInterface
     const STATUS_DISABLED           = 0;
 
     const CACHE_TAG                 = 'magenet_slider';
+    const EVENT_PREFIX              = 'magenet_slider';
+
+    const REGISTRY_KEY              = 'magenet_simple_slider';
 
     /**
      * @return int
@@ -72,6 +76,17 @@ interface SliderInterface
      * @return string
      */
     public function getDisplayFrom();
+
+    /**
+     * @param string $url
+     * @return SliderInterface
+     */
+    public function setUrl($url);
+
+    /**
+     * @return string
+     */
+    public function getUrl();
 
     /**
      * @param string|\DateTime $dateTo
