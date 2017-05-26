@@ -6,56 +6,48 @@
 
 namespace SP\Slider\Controller\Adminhtml\Slider;
 
-use Magento\Backend\App\Action;
-use Magento\Backend\App\Action\Context;
-use Magento\Framework\Registry;
-use Magento\Framework\View\Result\PageFactory;
+use SP\Slider\Controller\Adminhtml\Slider;
 
-class Index extends Action
+class Index extends Slider
 {
-    /**
-     * Core registry
-     *
-     * @var \Magento\Framework\Registry
-     */
-    protected $_coreRegistry;
+    public function execute()
+    {
+        //Call page factory to render layout and page content
+        $this->_setPageData();
 
-    /**
-     * Result page factory
-     *
-     * @var \Magento\Framework\View\Result\PageFactory
-     */
-    protected $_resultPageFactory;
-
-    protected $_resultPage = null;
-
-    /**
-     * @param Context       $context
-     * @param Registry      $coreRegistry
-     * @param PageFactory   $resultPageFactory
-     */
-    public function __construct(
-        Context $context,
-        Registry $coreRegistry,
-        PageFactory $resultPageFactory
-    ) {
-        parent::__construct($context);
-        $this->_coreRegistry = $coreRegistry;
-        $this->_resultPageFactory = $resultPageFactory;
+        return $this->getResultPage();
     }
 
-    /**
-     * News access rights checking
-     *
-     * @return bool
+    /*
+     * Check permission via ACL resource
      */
     protected function _isAllowed()
     {
         return $this->_authorization->isAllowed('SP_Slider::index_test');
     }
 
-    public function execute()
+    /**
+     * @return mixed
+     */
+    public function getResultPage()
     {
-        return $this->_resultPageFactory->create();
+        if (null === $this->_resultPage) {
+            $this->_resultPage = $this->_resultPageFactory->create();
+        }
+
+        return $this->_resultPage;
+    }
+
+    protected function _setPageData()
+    {
+        $resultPage = $this->getResultPage();
+        $resultPage->setActiveMenu('SP_Slider::grid');
+        $resultPage->getConfig()->getTitle()->prepend((__('Slider')));
+
+        //Add bread crumb
+        $resultPage->addBreadcrumb(__('Slider'), __('Slider'));
+        $resultPage->addBreadcrumb(__('Slider Grid'), __('Slider Grid'));
+
+        return $this;
     }
 }

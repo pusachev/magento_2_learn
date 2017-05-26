@@ -6,6 +6,9 @@
                 <resource id="SP_Slider::index" title="Slider" sortOrder="51">
                     <resource id="SP_Slider::slider_configuration" title="Configuration" sortOrder="99" />
                     <resource id="SP_Slider::index_test" title="Index action" sortOrder="99" />
+                    <resource id="SP_Slider::admin_edit" title="Edit action" sortOrder="99" />
+                    <resource id="SP_Slider::admin_create" title="Create action" sortOrder="99" />
+                    <resource id="SP_Slider::admin_delete" title="Delete action" sortOrder="99" />
                 </resource>
             </resource>
         </resources>
