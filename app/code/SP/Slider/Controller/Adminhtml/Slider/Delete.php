@@ -4,12 +4,12 @@
  * @copyright Copyright (c) 2017, Pavel Usachev
  */
 
-namespace SP\Events\Controller\Adminhtml\Events;
+namespace SP\Slider\Controller\Adminhtml\Slider;
 
-use SP\Events\Controller\Adminhtml\Events;
-use SP\Events\Model\Event;
+use SP\Slider\Model\Carousel;
+use SP\Slider\Controller\Adminhtml\Slider;
 
-class Delete extends Events
+class Delete extends Slider
 {
     /**
      * @return void
@@ -19,13 +19,13 @@ class Delete extends Events
         $id = (int) $this->getRequest()->getParam('id');
 
         if ($id) {
-            /** @var Event $model */
-            $model = $this->_eventFactory->create();
+            /** @var Carousel $model */
+            $model = $this->_carouselFactory->create();
             $model->load($id);
 
             // Check this news exists or not
             if (!$model->getId()) {
-                $this->messageManager->addError(__('This event no longer exists.'));
+                $this->messageManager->addError(__('This item no longer exists.'));
             } else {
                 try {
                     // Delete news

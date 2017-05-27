@@ -4,12 +4,12 @@
  * @copyright Copyright (c) 2017, Pavel Usachev
  */
 
-namespace SP\Events\Controller\Adminhtml\Events;
+namespace SP\Slider\Controller\Adminhtml\Slider;
 
-use SP\Events\Controller\Adminhtml\Events;
-use SP\Events\Model\Event;
+use SP\Slider\Model\Carousel;
+use SP\Slider\Controller\Adminhtml\Slider;
 
-class MassDelete extends Events
+class MassDelete extends Slider
 {
     /**
      * @return void
@@ -17,12 +17,12 @@ class MassDelete extends Events
     public function execute()
     {
         // Get IDs of the selected news
-        $ids = $this->getRequest()->getParam('events');
+        $ids = $this->getRequest()->getParam('ids');
 
         foreach ($ids as $id) {
             try {
-                /** @var Event $model */
-                $model = $this->_eventFactory->create();
+                /** @var Carousel $model */
+                $model = $this->_carouselFactory->create();
                 $model->load($id)->delete();
             } catch (\Exception $e) {
                 $this->messageManager->addError($e->getMessage());
