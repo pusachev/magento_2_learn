@@ -38,7 +38,7 @@ abstract class Slider extends Action
     /**
      * @var Data
      */
-    protected $_helper;
+    protected $dataHelper;
 
     protected $_resultPage = null;
 
@@ -60,6 +60,6 @@ abstract class Slider extends Action
         $this->_coreRegistry = $coreRegistry;
         $this->_resultPageFactory = $resultPageFactory;
         $this->_carouselFactory = $carouselFactory;
-        $this->_helper = $helper;
+        $this->dataHelper = $helper;
     }
 }

@@ -13,6 +13,7 @@ use Magento\Framework\Registry;
 use Magento\Framework\Data\FormFactory;
 use Magento\Cms\Model\Wysiwyg\Config;
 
+use SP\Slider\Api\Data\CarouselInterface;
 use SP\Slider\Block\Adminhtml\Slider\Edit;
 use SP\Slider\Model\Carousel;
 
@@ -62,16 +63,16 @@ class Info extends Generic implements TabInterface
             ['legend' => __('General')]
         );
 
-        if ($model->getId()) {
+        if ($model->getData(CarouselInterface::CAROUSEL_ID)) {
             $fieldset->addField(
-                'id',
+                CarouselInterface::CAROUSEL_ID,
                 'hidden',
-                ['name' => 'id']
+                ['name' => CarouselInterface::CAROUSEL_ID]
             );
         }
         $fieldset->addField(
             'image',
-            'imagefile',
+            'image',
             [
                 'name'        => 'image',
                 'label'    => __('Image'),

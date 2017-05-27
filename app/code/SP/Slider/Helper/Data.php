@@ -166,7 +166,6 @@ class Data extends AbstractHelper
      * Return URL for resized image
      *
      * @param string $imageFile
-     * @param string $baseDir
      * @param integer $width
      * @param integer $height
      * @return bool|string
@@ -222,8 +221,6 @@ class Data extends AbstractHelper
         );
 
         if ($adapter->isUploaded($scope)) {
-            // validate image
-
             if (!$adapter->isValid($scope)) {
                 throw new Exception(__('Uploaded image is not valid.'));
             }
@@ -235,7 +232,7 @@ class Data extends AbstractHelper
             $uploader->setAllowCreateFolders(true);
 
             if ($uploader->save($this->getBaseDir())) {
-                return $uploader->getUploadedFileName();
+                return self::MEDIA_PATH .'/'. $uploader->getUploadedFileName();
             }
 
         }

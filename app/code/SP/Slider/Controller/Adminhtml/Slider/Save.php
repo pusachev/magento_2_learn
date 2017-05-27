@@ -20,20 +20,24 @@ class Save extends Slider
 
         if ($isPost) {
             $model = $this->_carouselFactory->create();
-            $id = $this->getRequest()->getParam('id');
+            $id = $this->getRequest()->getParam('slider')[CarouselInterface::CAROUSEL_ID];
 
             if ($id) {
                 $model->load($id);
             }
             $formData = $this->getRequest()->getParam('slider');
+            if (is_array($formData['image'])) {
+                $formData['image'] = $formData['image']['value'];
+            }
             $model->setData($formData);
 
             try {
 
-                if (!empty($_FILES['image'])) {
+                if (!empty($_FILES['image']['name'])) {
+
                     $model->setData(
                         CarouselInterface::CAROUSEL_IMAGE,
-                        $this->_helper->uploadImage('image')
+                        $this->dataHelper->uploadImage('image')
                     );
                 }
 
