@@ -12,6 +12,7 @@ use Magento\Framework\Registry;
 use Magento\Framework\View\Result\PageFactory;
 
 use SP\Slider\Model\CarouselFactory;
+use SP\Slider\Helper\Data;
 
 abstract class Slider extends Action
 {
@@ -30,11 +31,14 @@ abstract class Slider extends Action
     protected $_resultPageFactory;
 
     /**
-     * News model factory
-     *
      * @var CarouselFactory
      */
     protected $_carouselFactory;
+
+    /**
+     * @var Data
+     */
+    protected $_helper;
 
     protected $_resultPage = null;
 
@@ -43,16 +47,19 @@ abstract class Slider extends Action
      * @param Registry          $coreRegistry
      * @param PageFactory       $resultPageFactory
      * @param CarouselFactory   $carouselFactory
+     * @param Data              $helper
      */
     public function __construct(
         Context $context,
         Registry $coreRegistry,
         PageFactory $resultPageFactory,
-        CarouselFactory $carouselFactory
+        CarouselFactory $carouselFactory,
+        Data $helper
     ) {
         parent::__construct($context);
         $this->_coreRegistry = $coreRegistry;
         $this->_resultPageFactory = $resultPageFactory;
         $this->_carouselFactory = $carouselFactory;
+        $this->_helper = $helper;
     }
 }

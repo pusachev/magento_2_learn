@@ -16,6 +16,9 @@
                         <arguments>
                             <argument name="rowUrl" xsi:type="array">
                                 <item name="path" xsi:type="string">*/*/edit</item>
+                                <item name="extraParamsTemplate" xsi:type="array">
+                                    <item name="id" xsi:type="string">getId</item>
+                                </item>
                             </argument>
                         </arguments>
                         <block class="Magento\Backend\Block\Widget\Grid\Column" as="id">

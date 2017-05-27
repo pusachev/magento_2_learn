@@ -3,8 +3,8 @@
  * @author Pavel Usachev <webcodekeeper@hotmail.com>
  * @copyright Copyright (c) 2017, Pavel Usachev
  */
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'MageNet_SliderSlider',
-    __DIR__
-);
+//\Magento\Framework\Component\ComponentRegistrar::register(
+//    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+//    'MageNet_SliderSlider',
+//    __DIR__
+//);

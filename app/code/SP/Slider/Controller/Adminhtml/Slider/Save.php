@@ -6,6 +6,7 @@
 
 namespace SP\Slider\Controller\Adminhtml\Slider;
 
+use SP\Slider\Api\Data\CarouselInterface;
 use SP\Slider\Controller\Adminhtml\Slider;
 
 class Save extends Slider
@@ -28,19 +29,23 @@ class Save extends Slider
             $model->setData($formData);
 
             try {
-                // Save news
+
+                if (!empty($_FILES['image'])) {
+                    $model->setData(
+                        CarouselInterface::CAROUSEL_IMAGE,
+                        $this->_helper->uploadImage('image')
+                    );
+                }
+
                 $model->save();
 
-                // Display success message
                 $this->messageManager->addSuccess(__('The slider has been saved.'));
 
-                // Check if 'Save and Continue'
                 if ($this->getRequest()->getParam('back')) {
                     $this->_redirect('*/*/edit', ['id' => $model->getId(), '_current' => true]);
                     return;
                 }
 
-                // Go to grid page
                 $this->_redirect('*/*/');
                 return;
             } catch (\Exception $e) {
