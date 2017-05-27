@@ -23,7 +23,9 @@ class MassDelete extends Slider
             try {
                 /** @var Carousel $model */
                 $model = $this->_carouselFactory->create();
-                $model->load($id)->delete();
+                $model->load($id);
+                $this->dataHelper->removeImage($model->getImage());
+                $model->delete();
             } catch (\Exception $e) {
                 $this->messageManager->addError($e->getMessage());
             }

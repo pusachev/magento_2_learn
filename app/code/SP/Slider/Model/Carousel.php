@@ -15,6 +15,9 @@ use SP\Slider\Model\ResourceModel\Carousel as CarouselResource;
 class Carousel extends AbstractModel
     implements IdentityInterface, CarouselInterface
 {
+    /** @var \SP\Slider\Helper\Data */
+    protected $helper;
+
     /**
      * @var string
      */
@@ -24,6 +27,7 @@ class Carousel extends AbstractModel
      * @var string
      */
     protected $_eventPrefix = CarouselInterface::CACHE_TAG;
+
 
     /**
      * Initialize resource model
@@ -38,26 +42,26 @@ class Carousel extends AbstractModel
     /**
      * @return string
      */
-    public function getImage() : string
+    public function getImage(): string
     {
-        return $this->getData(self::CAROUSEL_IMAGE);
+        return (string) $this->getData(self::CAROUSEL_IMAGE);
     }
 
     /**
      * @param string $image
      * @return CarouselInterface
      */
-    public function setImage(string $image) : CarouselInterface
+    public function setImage(string $image): CarouselInterface
     {
-       $this->setData(self::CAROUSEL_IMAGE, $image);
+        $this->setData(self::CAROUSEL_IMAGE, $image);
 
-       return $this;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAlt() : string
+    public function getAlt(): string
     {
         return $this->getData(self::CAROUSEL_ALT);
     }
@@ -66,7 +70,7 @@ class Carousel extends AbstractModel
      * @param string $alt
      * @return CarouselInterface
      */
-    public function setAlt(string $alt) : CarouselInterface
+    public function setAlt(string $alt): CarouselInterface
     {
         $this->setData(self::CAROUSEL_ALT, $alt);
 

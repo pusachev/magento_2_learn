@@ -154,8 +154,12 @@ class Data extends AbstractHelper
      */
     public function removeImage($imageFile)
     {
+        if (empty($imageFile)) {
+            return true;
+        }
+
         $io = $this->_ioFile;
-        $io->open(array('path' => $this->getBaseDir()));
+        $io->open(array('path' => $this->filesystem->getDirectoryRead(DirectoryList::MEDIA)->getAbsolutePath()));
         if ($io->fileExists($imageFile)) {
             return $io->rm($imageFile);
         }
