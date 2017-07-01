@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 namespace Magento\Sales\Service\V1;
@@ -14,7 +14,7 @@ use Magento\TestFramework\TestCase\WebapiAbstract;
 class CreditmemoListTest extends WebapiAbstract
 {
     /**
-     * ResourceModel path
+     * Resource path
      */
     const RESOURCE_PATH = '/V1/creditmemos';
 

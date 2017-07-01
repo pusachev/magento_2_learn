@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -16,7 +16,7 @@ class Curl extends Adapter\Rest\CurlClient
     const COOKIE_HEADER = 'Set-Cookie: ';
 
     /**
-     * @param string $resourcePath ResourceModel URL like /V1/Resource1/123
+     * @param string $resourcePath Resource URL like /V1/Resource1/123
      * @return string resource URL
      * @throws \Exception
      */
@@ -28,7 +28,7 @@ class Curl extends Adapter\Rest\CurlClient
     /**
      * Perform HTTP GET request
      *
-     * @param string $resourcePath ResourceModel URL like /V1/Resource1/123
+     * @param string $resourcePath Resource URL like /V1/Resource1/123
      * @param array $data
      * @param array $headers
      * @return array

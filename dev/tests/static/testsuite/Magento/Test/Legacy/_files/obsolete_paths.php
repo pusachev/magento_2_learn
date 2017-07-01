@@ -4,7 +4,7 @@
  *
  * Format: array(<path>[, <replacement>])
  *
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 return [
@@ -227,10 +227,10 @@ return [
         '/dev/tests/integration/testsuite/Magento/Core/Model/Design/Backend',
         '/dev/tests/integration/testsuite/Magento/Theme/Model/Design/Backend'
     ],
-    ['/app/code/Magento/Core/Model/ResourceModel/Theme', '/app/code/Magento/Theme/Model/ResourceModel/Theme'],
+    ['/app/code/Magento/Core/Model/Resource/Theme', '/app/code/Magento/Theme/Model/Resource/Theme'],
     [
-        '/dev/tests/integration/testsuite/Magento/Core/Model/ResourceModel/Theme',
-        '/dev/tests/integration/testsuite/Magento/Theme/Model/ResourceModel/Theme'
+        '/dev/tests/integration/testsuite/Magento/Core/Model/Resource/Theme',
+        '/dev/tests/integration/testsuite/Magento/Theme/Model/Resource/Theme'
     ],
     ['/dev/tests/unit/testsuite/Magento/Webapi/Service/Entity'],
     ['/app/code/Magento/Install'],

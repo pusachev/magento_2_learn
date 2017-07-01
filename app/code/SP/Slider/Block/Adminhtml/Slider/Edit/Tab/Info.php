@@ -89,17 +89,17 @@ class Info extends Generic implements TabInterface
             ]
         );
 
-        $wysiwygConfig = $this->_wysiwygConfig->getConfig();
-        $fieldset->addField(
-            'description',
-            'editor',
-            [
-                'name'     => 'description',
-                'label'    => __('Description'),
-                'required'  => true,
-                'config'    => $wysiwygConfig
-            ]
-        );
+//        $wysiwygConfig = $this->_wysiwygConfig->getConfig();
+//        $fieldset->addField(
+//            'description',
+//            'editor',
+//            [
+//                'name'     => 'description',
+//                'label'    => __('Description'),
+//                'required'  => true,
+//                'config'    => $wysiwygConfig
+//            ]
+//        );
 
         $data = $model->getData();
         $form->setValues($data);

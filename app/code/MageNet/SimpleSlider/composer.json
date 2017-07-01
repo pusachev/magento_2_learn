@@ -1,0 +1,22 @@
+{
+  "name": "mage_net/magento2-simple_slider",
+  "description": "A simple magento module.",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "magento/magento-composer-installer": "*"
+  },
+  "extra": {
+    "map": [
+      [
+        "*",
+        "MageNet/SimpleSlider"
+      ]
+    ]
+  }
+}

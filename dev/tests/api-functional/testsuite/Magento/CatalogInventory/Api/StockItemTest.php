@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 
@@ -27,12 +27,12 @@ class StockItemTest extends WebapiAbstract
     const SERVICE_VERSION = 'V1';
 
     /**
-     * ResourceModel path
+     * Resource path
      */
     const RESOURCE_GET_PATH = '/V1/stockItems';
 
     /**
-     * ResourceModel path
+     * Resource path
      */
     const RESOURCE_PUT_PATH = '/V1/products/:productSku/stockItems/:itemId';
 

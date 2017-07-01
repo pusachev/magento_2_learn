@@ -82,4 +82,15 @@ class Carousel extends AbstractModel
     {
         return [sprintf("%s_%s", self::CACHE_TAG, $this->getId())];
     }
+
+    /** {@inheritdoc} */
+    public function beforeDelete()
+    {
+        $this->_eventManager->dispatch(
+            'custom_image_delete',
+            ['image_path' => $this->getImage()]
+        );
+
+        return parent::beforeDelete();
+    }
 }

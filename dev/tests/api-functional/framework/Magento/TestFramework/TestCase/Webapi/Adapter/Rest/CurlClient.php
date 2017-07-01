@@ -2,7 +2,7 @@
 /**
  * Client for invoking REST API
  *
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 namespace Magento\TestFramework\TestCase\Webapi\Adapter\Rest;
@@ -33,7 +33,7 @@ class CurlClient
     /**
      * Perform HTTP GET request
      *
-     * @param string $resourcePath ResourceModel URL like /V1/Resource1/123
+     * @param string $resourcePath Resource URL like /V1/Resource1/123
      * @param array $data
      * @param array $headers
      * @return mixed
@@ -55,7 +55,7 @@ class CurlClient
     /**
      * Perform HTTP POST request
      *
-     * @param string $resourcePath ResourceModel URL like /V1/Resource1/123
+     * @param string $resourcePath Resource URL like /V1/Resource1/123
      * @param array $data
      * @param array $headers
      * @return mixed
@@ -68,7 +68,7 @@ class CurlClient
     /**
      * Perform HTTP PUT request
      *
-     * @param string $resourcePath ResourceModel URL like /V1/Resource1/123
+     * @param string $resourcePath Resource URL like /V1/Resource1/123
      * @param array $data
      * @param array $headers
      * @return mixed
@@ -81,7 +81,7 @@ class CurlClient
     /**
      * Perform HTTP DELETE request
      *
-     * @param string $resourcePath ResourceModel URL like /V1/Resource1/123
+     * @param string $resourcePath Resource URL like /V1/Resource1/123
      * @param array $headers
      * @return mixed
      */
@@ -101,7 +101,7 @@ class CurlClient
     /**
      * Perform HTTP POST or PUT request
      *
-     * @param string $resourcePath ResourceModel URL like /V1/Resource1/123
+     * @param string $resourcePath Resource URL like /V1/Resource1/123
      * @param array $data
      * @param boolean $put Set true to post data as HTTP PUT operation (update). If this value is set to false,
      *        HTTP POST (create) will be used
@@ -159,7 +159,7 @@ class CurlClient
     }
 
     /**
-     * @param string $resourcePath ResourceModel URL like /V1/Resource1/123
+     * @param string $resourcePath Resource URL like /V1/Resource1/123
      * @return string resource URL
      * @throws \Exception
      */

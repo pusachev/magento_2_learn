@@ -28,7 +28,7 @@ class Delete extends Slider
                 $this->messageManager->addError(__('This item no longer exists.'));
             } else {
                 try {
-                    $this->dataHelper->removeImage($model->getImage());
+                    //$this->dataHelper->removeImage($model->getImage());
                     // Delete news
                     $model->delete();
                     $this->messageManager->addSuccess(__('The news has been deleted.'));

@@ -2,7 +2,7 @@
 /**
  * Rule for searching DB dependency
  *
- * Copyright © 2016 Magento. All rights reserved.
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
 namespace Magento\TestFramework\Dependency;
@@ -37,7 +37,7 @@ class DbRule implements \Magento\TestFramework\Dependency\RuleInterface
      */
     public function getDependencyInfo($currentModule, $fileType, $file, &$contents)
     {
-        if ('php' != $fileType || !preg_match('#.*/(Setup|ResourceModel)/.*\.php$#', $file)) {
+        if ('php' != $fileType || !preg_match('#.*/(Setup|Resource)/.*\.php$#', $file)) {
             return [];
         }
 
