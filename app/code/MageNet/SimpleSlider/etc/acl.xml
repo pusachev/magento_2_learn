@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="MageNet_SimpleSlider::index" title="Slider" sortOrder="51">
+                    <resource id="MageNet_SimpleSlider::slider_configuration" title="Configuration" sortOrder="99" />
+                    <resource id="MageNet_SimpleSlider::grid" title="Slider Grid" sortOrder="99" />
+                    <resource id="MageNet_SimpleSlider::edit" title="Edit Slider" sortOrder="99" />
+                    <resource id="MageNet_SimpleSlider::new" title="Add New Slider" sortOrder="99" />
+                    <resource id="MageNet_SimpleSlider::delete" title="Delete Slider" sortOrder="99" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

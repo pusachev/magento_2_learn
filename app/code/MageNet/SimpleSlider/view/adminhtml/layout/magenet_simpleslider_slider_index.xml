@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="MageNet\SimpleSlider\Block\Adminhtml\Slider" name="magenet_simpleslider_grid">
+                <block class="Magento\Backend\Block\Widget\Grid" name="magenet_simpleslider_grid.grid" as="grid">
+                    <arguments>
+                        <argument name="id" xsi:type="string">slider_id</argument>
+                        <argument name="dataSource" xsi:type="object">MageNet\SimpleSlider\Model\ResourceModel\Slider\Collection</argument>
+                        <argument name="default_sort" xsi:type="string">id</argument>
+                        <argument name="default_dir" xsi:type="string">ASC</argument>
+                        <argument name="save_parameters_in_session" xsi:type="string">1</argument>
+                    </arguments>
+                    <block class="Magento\Backend\Block\Widget\Grid\Massaction" name="magenet_simplesider.slider.massaction" as="grid.massaction">
+                        <arguments>
+                            <argument name="massaction_id_field" xsi:type="string">slider_id</argument>
+                            <argument name="form_field_name" xsi:type="string">ids</argument>
+                            <argument name="use_select_all" xsi:type="string">1</argument>
+                            <argument name="options" xsi:type="array">
+                                <item name="disable" xsi:type="array">
+                                    <item name="label" xsi:type="string" translate="true">Delete</item>
+                                    <item name="url" xsi:type="string">*/*/massDelete</item>
+                                </item>
+                            </argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\ColumnSet" name="magenet_simpleslider_grid.grid.columnSet" as="grid.columnSet">
+                        <arguments>
+                            <argument name="rowUrl" xsi:type="array">
+                                <item name="path" xsi:type="string">*/*/edit</item>
+                                <item name="extraParamsTemplate" xsi:type="array">
+                                    <item name="id" xsi:type="string">getId</item>
+                                </item>
+                            </argument>
+                        </arguments>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="id">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">ID</argument>
+                                <argument name="index" xsi:type="string">slider_id</argument>
+                                <argument name="type" xsi:type="string">text</argument>
+                                <argument name="column_css_class" xsi:type="string">col-id</argument>
+                                <argument name="header_css_class" xsi:type="string">col-id</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="description">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Description</argument>
+                                <argument name="index" xsi:type="string">description</argument>
+                                <argument name="type" xsi:type="string">text</argument>
+                                <argument name="column_css_class" xsi:type="string">col-id</argument>
+                                <argument name="header_css_class" xsi:type="string">col-id</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="image">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Image</argument>
+                                <argument name="index" xsi:type="string">image</argument>
+                                <argument name="type" xsi:type="string">image</argument>
+                                <argument name="column_css_class" xsi:type="string">col-id</argument>
+                                <argument name="header_css_class" xsi:type="string">col-id</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="alt">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Alt</argument>
+                                <argument name="index" xsi:type="string">alt</argument>
+                                <argument name="type" xsi:type="string">text</argument>
+                                <argument name="column_css_class" xsi:type="string">col-id</argument>
+                                <argument name="header_css_class" xsi:type="string">col-id</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="display_from">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Display From</argument>
+                                <argument name="index" xsi:type="string">display_from</argument>
+                                <argument name="type" xsi:type="string">date</argument>
+                                <argument name="column_css_class" xsi:type="string">col-id</argument>
+                                <argument name="header_css_class" xsi:type="string">col-id</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="display_to">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Display To</argument>
+                                <argument name="index" xsi:type="string">display_to</argument>
+                                <argument name="type" xsi:type="string">date</argument>
+                                <argument name="column_css_class" xsi:type="string">col-id</argument>
+                                <argument name="header_css_class" xsi:type="string">col-id</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="status">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Status</argument>
+                                <argument name="type" xsi:type="string">options</argument>
+                                <argument name="options" xsi:type="options" model="Magento\Config\Model\Config\Source\Enabledisable"/>
+                                <argument name="index" xsi:type="string">status</argument>
+                                <argument name="id" xsi:type="string">status</argument>
+                            </arguments>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

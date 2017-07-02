@@ -10,10 +10,10 @@ use Magento\Framework\Data\Form;
 
 use MageNet\SimpleSlider\Api\Data\SliderInterface;
 
-class ImageInfo extends AbstractTab
+class General extends AbstractTab
 {
-    const TAB_LABEL     = 'Image';
-    const TAB_TITLE     = 'Image';
+    const TAB_LABEL     = 'General';
+    const TAB_TITLE     = 'General';
 
     /**
      * Prepare form fields
@@ -28,27 +28,26 @@ class ImageInfo extends AbstractTab
         $form->setFieldNameSuffix('slider');
 
         $fieldset = $form->addFieldset(
-            'image_fieldset',
+            'general_fieldset',
             ['legend' => __('General')]
         );
 
+        if ($this->model->getData(SliderInterface::ID_COLUMN_NAME)) {
+            $fieldset->addField(
+                SliderInterface::ID_COLUMN_NAME,
+                'hidden',
+                ['name' => SliderInterface::ID_COLUMN_NAME]
+            );
+        }
 
         $fieldset->addField(
-            SliderInterface::IMAGE_COLUMN_NAME,
-            'image',
+            SliderInterface::DESCRIPTION_COLUMN_NAME,
+            'editor',
             [
-                'name'        => SliderInterface::IMAGE_COLUMN_NAME,
-                'label'    => __('Image'),
-                'required'     => true
-            ]
-        );
-        $fieldset->addField(
-            SliderInterface::ALT_COLUMN_NAME,
-            'text',
-            [
-                'name'      => SliderInterface::ALT_COLUMN_NAME,
-                'label'     => __('Alt'),
-                'required'  => false
+                'name'      => SliderInterface::DESCRIPTION_COLUMN_NAME,
+                'label'     => __('Description'),
+                'required'  => true,
+                'config'    => $this->wysiwygConfig->getConfig()
             ]
         );
 

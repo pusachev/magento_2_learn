@@ -44,7 +44,7 @@ class Slider extends Template implements IdentityInterface
     /**
      * @return SliderCollection
      */
-    public function getEvents()
+    public function getCollection()
     {
         if (!$this->hasData(static::COLLECTION_KEY)) {
             $this->fillCollection();
@@ -63,6 +63,7 @@ class Slider extends Template implements IdentityInterface
         $collection = $this->_collectionFactory
                            ->create()
                            ->addFilter('is_active', SliderInterface::STATUS_ENABLED)
+                           ->addFilter('')
                            ->addOrder(
                                 SliderInterface::DISPLAY_FROM_COLUMN_NAME,
                                 'DESC'

@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
-    <menu>
-        <add id="SP_Slider::index_id" title="Slider" module="SP_Slider" sortOrder="0" resource="SP_Slider::index"/>
-        <add id="SP_Slider::index" title="Slider" module="SP_Slider" action="sp_slider/slider" parent="SP_Slider::index_id" sortOrder="0" resource="SP_Slider::index"/>
-        <add id="SP_Slider::slider_configuration" title="Configuration" module="SP_Slider" parent="SP_Slider::index_id" sortOrder="0" action="adminhtml/system_config/edit/section/sp_slider_section" resource="SP_Slider::slider_configuration"/>
-    </menu>
-</config>

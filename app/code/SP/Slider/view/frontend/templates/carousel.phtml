@@ -1,9 +1,0 @@
-<?php
-/** @var \SP\Slider\Model\Carousel $data */
-    $data = $this->getSlides();
-?>
-
-<?php foreach ($data as $item): ?>
-    <h1><?php echo $item->getImage() ?></h1>
-    <h1><?php echo $item->getAlt() ?></h1>
-<?php endforeach; ?>

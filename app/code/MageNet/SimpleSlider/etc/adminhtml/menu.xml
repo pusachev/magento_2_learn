@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MageNet_SimpleSlider::index" title="Slider" module="MageNet_SimpleSlider" sortOrder="0" resource="MageNet_SimpleSlider::index"/>
+        <add id="MageNet_SimpleSlider::grid" title="Slider Grid" module="MageNet_SimpleSlider" action="magenet_simpleslider/slider" parent="MageNet_SimpleSlider::index" sortOrder="0" resource="MageNet_SimpleSlider::index"/>
+        <add id="MageNet_SimpleSlider::new" title="Add Item" module="MageNet_SimpleSlider" action="magenet_simpleslider/slider/create" parent="MageNet_SimpleSlider::index" sortOrder="0" resource="MageNet_SimpleSlider::new"/>
+        <add id="MageNet_SimpleSlider::slider_configuration" title="Configuration" module="MageNet_SimpleSlider" parent="MageNet_SimpleSlider::index" sortOrder="0" action="adminhtml/system_config/edit/section/magenet_simple_section" resource="MageNet_SimpleSlider::slider_configuration"/>
+    </menu>
+</config>

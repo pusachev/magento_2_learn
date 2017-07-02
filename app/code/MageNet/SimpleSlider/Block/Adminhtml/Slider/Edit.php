@@ -6,10 +6,11 @@
 
 namespace MageNet\SimpleSlider\Block\Adminhtml\Slider;
 
-use MageNet\SimpleSlider\Api\Data\SliderInterface;
 use Magento\Backend\Block\Widget\Form\Container;
 use Magento\Backend\Block\Widget\Context;
 use Magento\Framework\Registry;
+
+use MageNet\SimpleSlider\Api\Data\SliderInterface;
 
 class Edit extends Container
 {
@@ -18,7 +19,7 @@ class Edit extends Container
      *
      * @var Registry
      */
-    protected $_coreRegistry = null;
+    protected $registry;
 
     /**
      * @param Context $context
@@ -30,7 +31,7 @@ class Edit extends Container
         Registry $registry,
         array $data = []
     ) {
-        $this->_coreRegistry = $registry;
+        $this->registry = $registry;
         parent::__construct($context, $data);
     }
 
@@ -41,7 +42,7 @@ class Edit extends Container
      */
     protected function _construct()
     {
-        $this->_objectId = 'id';
+        $this->_objectId   = SliderInterface::ID_COLUMN_NAME;
         $this->_controller = 'adminhtml_slider';
         $this->_blockGroup = 'MageNet_SimpleSlider';
 
@@ -70,7 +71,7 @@ class Edit extends Container
     /** {@inheritdoc} */
     public function getHeaderText()
     {
-        $model = $this->_coreRegistry->registry(SliderInterface::REGISTRY_KEY);
+        $model = $this->registry->registry(SliderInterface::REGISTRY_KEY);
         if ($model->getId()) {
             return __("Edit slider item '%1'", $model->getId());
         } else {

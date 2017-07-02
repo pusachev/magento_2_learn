@@ -10,6 +10,7 @@ use Magento\Backend\Block\Widget\Tabs as WidgetTabs;
 
 use MageNet\SimpleSlider\Block\Adminhtml\Slider\Edit\Tab\ImageInfo as ImageInfoTab;
 use MageNet\SimpleSlider\Block\Adminhtml\Slider\Edit\Tab\DisplaySetting as DisplaySettingTab;
+use MageNet\SimpleSlider\Block\Adminhtml\Slider\Edit\Tab\General as GeneralTab;
 
 class Tabs extends WidgetTabs
 {
@@ -28,6 +29,17 @@ class Tabs extends WidgetTabs
     protected function _beforeToHtml()
     {
         $this->addTab(
+            'general_info',
+            [
+                'label' => __('General'),
+                'title' => __('General'),
+                'content' => $this->getLayout()->createBlock(
+                    GeneralTab::class
+                )->toHtml(),
+                'active' => true
+            ]
+        )
+            ->addTab(
             'image_info',
                 [
                     'label' => __('Image info'),
@@ -35,7 +47,7 @@ class Tabs extends WidgetTabs
                     'content' => $this->getLayout()->createBlock(
                     ImageInfoTab::class
                     )->toHtml(),
-                    'active' => true
+                    'active' => false
                 ]
             )
             ->addTab(
